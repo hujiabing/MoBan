@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_tab_host">
+        <item>首页</item>
+        <item>好友</item>
+        <item>消息</item>
+    </string-array>
+</resources>
