@@ -1,7 +1,9 @@
 package com.hjb.model.activity;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentTabHost;
+import android.support.v4.view.ViewPager;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -23,6 +25,9 @@ public class MainActivity extends BaseActivity {
     FrameLayout contentFl;
     @InjectView(R.id.main_tab_host)
     FragmentTabHost mainTabHost;
+    @InjectView(R.id.tab_FindFragment_title)
+    TabLayout tabFindFragmentTitle;
+
 
     private Class tabHostFragment[] = {DefaultFragment.class, DefaultFragment.class, DefaultFragment.class};
     private int tabHostImg[] = {R.drawable.tab_1_btn, R.drawable.tab_2_btn, R.drawable.tab_3_btn};
@@ -49,7 +54,7 @@ public class MainActivity extends BaseActivity {
             tabWidget.setGravity(Gravity.CENTER_VERTICAL);
             tabWidget.setDividerDrawable(null);
             //可设置Tab区域的背景
-//            mainTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.选择器);
+            //mainTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.选择器);
         }
     }
 

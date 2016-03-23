@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.squareup.okhttp.OkHttpClient;
+
 /**
  * Created by hjb on 2016/1/13.
  */
@@ -12,18 +14,21 @@ public class MyApplication extends Application {
     private static Handler handler;
     private static Thread mainThread;
     private static int mainThreadId;
+
     @Override
     public void onCreate() {
         super.onCreate();
+        OkHttpClient okHttpClient=new OkHttpClient();
         //handler,Context,主线程,主线程id
         mContext = getApplicationContext();
+//        EaseUI.getInstance().init(mContext);
         handler = new Handler();
         mainThread = Thread.currentThread();
         //获取当前线程的id,当前线程主线程
         mainThreadId = android.os.Process.myTid();
 
     }
-
+    
     public static Context getContext() {
         return mContext;
     }
